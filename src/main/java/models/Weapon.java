@@ -103,4 +103,39 @@ public class Weapon {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Weapon weapon = (Weapon) o;
+
+        if (id != weapon.id) return false;
+        if (name != null ? !name.equals(weapon.name) : weapon.name != null) return false;
+        if (skill != null ? !skill.equals(weapon.skill) : weapon.skill != null) return false;
+        if (damage != null ? !damage.equals(weapon.damage) : weapon.damage != null) return false;
+        if (critical != null ? !critical.equals(weapon.critical) : weapon.critical != null) return false;
+        if (range != null ? !range.equals(weapon.range) : weapon.range != null) return false;
+        if (encumberance != null ? !encumberance.equals(weapon.encumberance) : weapon.encumberance != null)
+            return false;
+        if (hardPoint != null ? !hardPoint.equals(weapon.hardPoint) : weapon.hardPoint != null) return false;
+        if (rarity != null ? !rarity.equals(weapon.rarity) : weapon.rarity != null) return false;
+        return price != null ? price.equals(weapon.price) : weapon.price == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (skill != null ? skill.hashCode() : 0);
+        result = 31 * result + (damage != null ? damage.hashCode() : 0);
+        result = 31 * result + (critical != null ? critical.hashCode() : 0);
+        result = 31 * result + (range != null ? range.hashCode() : 0);
+        result = 31 * result + (encumberance != null ? encumberance.hashCode() : 0);
+        result = 31 * result + (hardPoint != null ? hardPoint.hashCode() : 0);
+        result = 31 * result + (rarity != null ? rarity.hashCode() : 0);
+        result = 31 * result + (price != null ? price.hashCode() : 0);
+        result = 31 * result + id;
+        return result;
+    }
 }
