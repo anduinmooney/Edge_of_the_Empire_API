@@ -30,7 +30,7 @@ public class Sql2oArmorDao implements ArmorDao {
 
     @Override
     public void deleteById(int id) {
-        String sql = "DELETE from armor WHERE id=:id";
+        String sql = "DELETE from armors WHERE id=:id";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id", id)

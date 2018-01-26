@@ -48,6 +48,14 @@ public class Sql2oArmorDaoTest {
         assertEquals(1, armorDao.getAll().size());
     }
 
+    @Test
+    public void deleteByIdDeletesCorrectArmor() throws Exception {
+        Armor testArmor = setupArmor();
+        armorDao.add(testArmor);
+        armorDao.deleteById(testArmor.getId());
+        assertEquals(1, armorDao.getAll().size());
+    }
+
     public Armor setupArmor (){
         return new Armor("Armored Clothing", "1", "1", "1000", "3", "1", "6");
 
