@@ -137,7 +137,7 @@ public class WeaponTest {
     }
 
     public Weapon setupAltWeapon (){
-        return new Weapon("Blaster Pistol", "Ranged Light", "6", "3", "Medium", "1", "3", "4", "4F00");
+        return new Weapon("Blaster Pistol", "Ranged Light", "6", "3", "Medium", "1", "3", "4", "400");
 
     }
 
