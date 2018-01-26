@@ -53,7 +53,7 @@ public class Sql2oAdversariesDaoTest {
         Adversaries testAdversaries = setupAdversaries();
         adversariesDao.add(testAdversaries);
         adversariesDao.deleteById(testAdversaries.getId());
-        assertEquals(1, adversariesDao.getAll().size());
+        assertEquals(0, adversariesDao.getAll().size());
     }
 
 
