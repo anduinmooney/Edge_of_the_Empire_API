@@ -104,7 +104,7 @@ public class ArmorTest {
         testArmor.setArmorRarity("0");
         assertNotEquals("6",testArmor.getArmorRarity());
     }
-    
+
     public Armor setupArmor (){
         return new Armor("Armored Clothing", "1", "1", "1000", "3", "1", "6");
 
