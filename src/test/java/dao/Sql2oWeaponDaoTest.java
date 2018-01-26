@@ -53,7 +53,7 @@ public class Sql2oWeaponDaoTest {
         Weapon testWeapon = setupWeapon();
         weaponDao.add(testWeapon);
         weaponDao.deleteById(testWeapon.getId());
-        assertEquals(1, weaponDao.getAll().size());
+        assertEquals(0, weaponDao.getAll().size());
     }
 
 
