@@ -53,7 +53,7 @@ public class Sql2oArmorDaoTest {
         Armor testArmor = setupArmor();
         armorDao.add(testArmor);
         armorDao.deleteById(testArmor.getId());
-        assertEquals(1, armorDao.getAll().size());
+        assertEquals(0, armorDao.getAll().size());
     }
 
     public Armor setupArmor (){
