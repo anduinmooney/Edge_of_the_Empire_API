@@ -45,7 +45,7 @@ public class Sql2oAdversariesDaoTest {
     public void addedAdversariesAreReturnedFromGetAll() throws Exception {
         Adversaries testAdversaries = setupAdversaries();
         adversariesDao.add(testAdversaries);
-        assertEquals(0, adversariesDao.getAll().size());
+        assertEquals(1, adversariesDao.getAll().size());
     }
 
 
