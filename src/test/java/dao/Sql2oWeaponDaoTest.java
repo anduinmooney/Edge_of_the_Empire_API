@@ -45,7 +45,7 @@ public class Sql2oWeaponDaoTest {
     public void addedWeaponsAreReturnedFromGetAll() throws Exception {
         Weapon testWeapon = setupWeapon();
         weaponDao.add(testWeapon);
-        assertEquals(0, weaponDao.getAll().size());
+        assertEquals(1, weaponDao.getAll().size());
     }
 
 
