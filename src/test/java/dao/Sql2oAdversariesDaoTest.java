@@ -56,6 +56,14 @@ public class Sql2oAdversariesDaoTest {
         assertEquals(0, adversariesDao.getAll().size());
     }
 
+    @Test
+    public void updateByIdUpdatesArmor() {
+        Adversaries adversaries = new Adversaries("Aqualish Thug", "Minion", "SoF:126");
+        adversariesDao.add(adversaries);
+        adversariesDao.update(1, "Defel Assasin", "Nemisis", "E-CRB:392");
+        assertEquals("Not Defel Assassin", adversariesDao.findById(1).getAdversaryName());
+    }
+
 
 
     public Adversaries setupAdversaries (){
