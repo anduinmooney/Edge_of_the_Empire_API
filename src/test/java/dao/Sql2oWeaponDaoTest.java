@@ -48,6 +48,14 @@ public class Sql2oWeaponDaoTest {
         assertEquals(1, weaponDao.getAll().size());
     }
 
+    @Test
+    public void deleteByIdDeletesCorrectWeapon() throws Exception {
+        Weapon testWeapon = setupWeapon();
+        weaponDao.add(testWeapon);
+        weaponDao.deleteById(testWeapon.getId());
+        assertEquals(1, weaponDao.getAll().size());
+    }
+
 
 
     public Weapon setupWeapon (){
