@@ -48,6 +48,14 @@ public class Sql2oAdversariesDaoTest {
         assertEquals(1, adversariesDao.getAll().size());
     }
 
+    @Test
+    public void deleteByIdDeletesCorrectAdversaries() throws Exception {
+        Adversaries testAdversaries = setupAdversaries();
+        adversariesDao.add(testAdversaries);
+        adversariesDao.deleteById(testAdversaries.getId());
+        assertEquals(1, adversariesDao.getAll().size());
+    }
+
 
 
     public Adversaries setupAdversaries (){
