@@ -41,6 +41,13 @@ public class Sql2oArmorDaoTest {
         assertNotEquals(originalArmorId,testArmor.getId());
     }
 
+    @Test
+    public void addedArmorsAreReturnedFromGetAll() throws Exception {
+        Armor testArmor = setupArmor();
+        armorDao.add(testArmor);
+        assertEquals(0, armorDao.getAll().size());
+    }
+
     public Armor setupArmor (){
         return new Armor("Armored Clothing", "1", "1", "1000", "3", "1", "6");
 
