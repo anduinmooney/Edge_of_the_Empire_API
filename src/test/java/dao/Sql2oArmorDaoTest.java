@@ -37,7 +37,7 @@ public class Sql2oArmorDaoTest {
     public void addingArmorSetsId() throws Exception {
         Armor testArmor = setupArmor();
         int originalArmorId = testArmor.getId();
-        armorDao.add(null);
+        armorDao.add(testArmor);
         assertNotEquals(originalArmorId,testArmor.getId());
     }
 
