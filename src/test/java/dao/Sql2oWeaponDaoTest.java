@@ -37,7 +37,7 @@ public class Sql2oWeaponDaoTest {
     public void addingWeaponSetsId() throws Exception {
         Weapon testWeapon = setupWeapon();
         int originalWeaponId = testWeapon.getId();
-        weaponDao.add(null);
+        weaponDao.add(testWeapon);
         assertNotEquals(originalWeaponId,testWeapon.getId());
     }
 
