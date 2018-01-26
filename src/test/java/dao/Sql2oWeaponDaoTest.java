@@ -23,7 +23,7 @@ public class Sql2oWeaponDaoTest {
         String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "", "");
         weaponDao = new Sql2oWeaponDao(sql2o);
-//        armorDao = new Sql2oArmorDao(sql2o);
+        armorDao = new Sql2oArmorDao(sql2o);
 //        adversariesDao = new Sql2oAdversariesDao(sql2o);
         conn = sql2o.open();
     }
