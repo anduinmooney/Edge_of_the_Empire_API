@@ -56,6 +56,14 @@ public class Sql2oArmorDaoTest {
         assertEquals(0, armorDao.getAll().size());
     }
 
+    @Test
+    public void updateByIdUpdatesArmor() {
+        Armor armor = new Armor("Armored Clothing", "1", "1", "1000", "3", "1", "6");
+        armorDao.add(null);
+        armorDao.update(1, "Heavy Clothing", "0", "1", "50", "1", "0", "0");
+        assertEquals("Heavy Clothing", armorDao.findById(1).getArmorName());
+    }
+
     public Armor setupArmor (){
         return new Armor("Armored Clothing", "1", "1", "1000", "3", "1", "6");
 
