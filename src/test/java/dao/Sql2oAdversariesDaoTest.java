@@ -37,7 +37,7 @@ public class Sql2oAdversariesDaoTest {
     public void addingAdversariesSetsId() throws Exception {
         Adversaries testAdversaries = setupAdversaries();
         int originalAdversariesId = testAdversaries.getId();
-        adversariesDao.add(null);
+        adversariesDao.add(testAdversaries);
         assertNotEquals(originalAdversariesId,testAdversaries.getId());
     }
 
