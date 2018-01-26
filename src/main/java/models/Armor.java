@@ -8,6 +8,7 @@ public class Armor {
     private String armorEncumberance;
     private String armorHardPoint;
     private String armorRarity;
+    private int id;
 
     public Armor(String armorName, String defense, String soak, String armorPrice, String armorEncumberance, String armorHardPoint, String armorRarity) {
         this.armorName = armorName;
@@ -25,6 +26,14 @@ public class Armor {
 
     public void setArmorName(String name) {
         this.armorName = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDefense() {

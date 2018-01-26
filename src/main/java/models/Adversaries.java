@@ -4,6 +4,7 @@ public class Adversaries {
     private String adversaryName;
     private String level;
     private String index;
+    private int id;
 
     public Adversaries(String adversaryName, String level, String index) {
         this.adversaryName = adversaryName;
@@ -35,6 +36,13 @@ public class Adversaries {
         this.index = index;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
