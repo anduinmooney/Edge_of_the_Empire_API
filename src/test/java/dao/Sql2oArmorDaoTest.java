@@ -59,7 +59,7 @@ public class Sql2oArmorDaoTest {
     @Test
     public void updateByIdUpdatesArmor() {
         Armor armor = new Armor("Armored Clothing", "1", "1", "1000", "3", "1", "6");
-        armorDao.add(null);
+        armorDao.add(armor);
         armorDao.update(1, "Heavy Clothing", "0", "1", "50", "1", "0", "0");
         assertEquals("Heavy Clothing", armorDao.findById(1).getArmorName());
     }
