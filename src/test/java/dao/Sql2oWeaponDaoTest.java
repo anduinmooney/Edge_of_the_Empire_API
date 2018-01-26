@@ -59,8 +59,8 @@ public class Sql2oWeaponDaoTest {
     @Test
     public void updateByIdUpdatesWeapon() {
         Weapon weapon = new Weapon("Blaster Rifle", "Ranged Heavy", "9", "3", "Long", "4", "4", "5", "900");
-        weaponDao.add(null);
-        weaponDao.update(1, "Blaster Pistol", "Ranged Light", "6", "3", "Medium", "1", "3", "4", "400");
+        weaponDao.add(weapon);
+        weaponDao.update(1, "Boonta Blaster", "Ranged Light", "6", "3", "Medium", "1", "3", "4", "400");
         assertEquals("Boonta Blaster", weaponDao.findById(1).getName());
     }
 
