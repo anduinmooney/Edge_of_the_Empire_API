@@ -16,9 +16,8 @@ I wanted to keep all of these different things in one database to help Game Mast
 
 _API Examples:_
 
-* _Screenshot_
-* _Screenshot_
-* _Screenshot_
+* _https://imgur.com/gallery/9MkEy_
+
 
 ## Setup/Installation Requirements
 
